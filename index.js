@@ -45,7 +45,7 @@ async function run() {
         const user = req.body;          
         const result = await userCollection.insertOne(user);
         console.log(result);
-        user.id = result.insertedId;
+        user._id = result.insertedId;
         res.send(user)
         
     })   
